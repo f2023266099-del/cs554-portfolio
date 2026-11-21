@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore frontend and full-stack web development projects built by Mashood-Ul-Hassan.">
+  <title>Projects | Mashood-Ul-Hassan Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a class="brand" href="index.html">Mashood.dev</a>
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html" aria-current="page">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button type="button" id="theme-toggle" class="btn btn-outline" aria-label="Toggle dark mode">
+        Dark Mode
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content" class="container section">
+    <header class="page-header">
+      <h1>Featured Projects</h1>
+      <p>Filter by technology or search by project title and stack.</p>
+    </header>
+
+    <section class="filter-bar" aria-label="Filter projects">
+      <div class="form-group">
+        <label for="project-search">Search projects</label>
+        <input type="search" id="project-search" placeholder="Search by title or tech...">
+      </div>
+
+      <div class="form-group">
+        <label for="tech-filter">Filter by technology</label>
+        <select id="tech-filter">
+          <option value="all">All Technologies</option>
+        </select>
+      </div>
+    </section>
+
+    <p id="results-count" class="results-meta" aria-live="polite"></p>
+
+    <section aria-label="Project list">
+      <div id="projects-grid" class="projects-grid"></div>
+      <p id="empty-state" class="empty-state" hidden>No projects found.</p>
+    </section>
+
+    <!-- Bonus: Native <dialog> modal for project details -->
+    <dialog id="project-modal" class="modal">
+      <div class="modal-inner">
+        <div class="modal-header">
+          <h2 id="modal-title">Project Details</h2>
+          <button type="button" id="close-modal" class="btn btn-outline" aria-label="Close modal">Close</button>
+        </div>
+        <p id="modal-year" class="meta-text"></p>
+        <p id="modal-description"></p>
+        <ul id="modal-tech" class="tag-list"></ul>
+        <div class="modal-actions">
+          <a id="modal-link" href="#" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Open Repository</a>
+        </div>
+      </div>
+    </dialog>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Mashood-Ul-Hassan. Built with semantic HTML, CSS &amp; JS.</p>
+      <ul class="footer-links">
+        <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="contact.html">Email Me</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
